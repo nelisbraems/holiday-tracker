@@ -5,7 +5,7 @@ import axios from 'axios';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const API_URL = 'http://localhost:3001/api/trips';
+const API_URL = `${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/api/trips`;
 
 // Fix default marker icon issue with webpack
 delete L.Icon.Default.prototype._getIconUrl;
