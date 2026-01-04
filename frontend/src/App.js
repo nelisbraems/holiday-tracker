@@ -4,6 +4,7 @@ import TripList from './components/TripList';
 import AddTrip from './components/AddTrip';
 import TripDetail from './components/TripDetail';
 import EditTrip from './components/EditTrip';
+import MapView from './components/MapView';
 import './App.css';
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
                 <Link to="/" className="nav-link">My Trips</Link>
               </li>
               <li className="nav-item">
+                <Link to="/map" className="nav-link">Map View</Link>
+              </li>
+              <li className="nav-item">
                 <Link to="/add" className="nav-link">Add Trip</Link>
               </li>
             </ul>
@@ -29,6 +33,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<TripList />} />
+            <Route path="/map" element={<MapView />} />
             <Route path="/add" element={<AddTrip />} />
             <Route path="/trip/:id" element={<TripDetail />} />
             <Route path="/edit/:id" element={<EditTrip />} />
